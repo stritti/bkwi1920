@@ -49,7 +49,7 @@ Für die Entwicklung bieten sich folgende Programme an:
 
 ## Unterstützung
 
-Das Projekt wird durch die Sybit GmbH mit Coaching unterstützt.
+Das Projekt wird durch die [Sybit GmbH](https://www.sybit.de) mit Coaching unterstützt.
 
 ## Lizenz
 
