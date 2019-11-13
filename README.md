@@ -44,8 +44,18 @@ Für die Entwicklung bieten sich folgende Programme an:
     ```
 
     Dabei ist `C:\Projekte\BKWI\bkwi1920` das Verzeichnis des Projekte und `C:\xampp` das Installationsverzeichnisvon XAMPP.
-* Nun kann Apache und MySQLüber das XAMPP-Controlpanel gestartet werden.
-* Das Projekt ist jetzt unter <http://localhost/bkwi/> erreichbar.
+* Nun kann Apache und MySQL über das XAMPP-Controlpanel gestartet werden.
+
+### Datenbank anlegen
+
+Damit das Projekt gestartet werden kann, muss nun noch die Datenbank eingerichtet werden.
+
+| Hinweis: Die Datenbank ist in der DAtei `web/inc/config.inc.php` hinterlegt.
+
+* Mit z.B. phpMyAdmin (`http://localhost/phpmyadmin/`) eine Datenbank anlegen (aktuell: `bkwi1920`)
+* In dieser Datenbank die SQL-Skripte aus dem Ordner `/database` ausführen.
+
+Das Projekt ist jetzt unter <http://localhost/bkwi/> erreichbar.
 
 ## Unterstützung
 
