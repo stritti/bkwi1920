@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-require_once("inc/config.inc.php");
-require_once("inc/functions.inc.php");
+require_once("../inc/config.inc.php");
+require_once("../inc/functions.inc.php");
 
 $error_msg = "";
 if(isset($_POST['email']) && isset($_POST['passwort'])) {
@@ -20,14 +20,14 @@ if(isset($_POST['email']) && isset($_POST['passwort'])) {
 		if(isset($_POST['angemeldet_bleiben'])) {
 			$identifier = random_string();
 			$securitytoken = random_string();
-				
+
 			$insert = $pdo->prepare("INSERT INTO securitytokens (user_id, identifier, securitytoken) VALUES (:user_id, :identifier, :securitytoken)");
 			$insert->execute(array('user_id' => $user['id'], 'identifier' => $identifier, 'securitytoken' => sha1($securitytoken)));
 			setcookie("identifier",$identifier,time()+(3600*24*365)); //Valid for 1 year
 			setcookie("securitytoken",$securitytoken,time()+(3600*24*365)); //Valid for 1 year
 		}
 
-		header("location: internal.php");
+		header("location: /");
 		exit;
 	} else {
 		$error_msg =  "E-Mail oder Passwort war ungültig<br><br>";
@@ -37,16 +37,16 @@ if(isset($_POST['email']) && isset($_POST['passwort'])) {
 
 $email_value = "";
 if(isset($_POST['email']))
-	$email_value = htmlentities($_POST['email']); 
+	$email_value = htmlentities($_POST['email']);
 
-include("templates/header.inc.php");
+include("../templates/header.inc.php");
 ?>
  <div class="container small-container-330 form-signin">
   <form action="login.php" method="post">
 	  <br>
 	<h2 class="form-signin-heading">Login</h2>
 	<br>
-<?php 
+<?php
 if(isset($error_msg) && !empty($error_msg)) {
 	echo $error_msg;
 }
@@ -69,8 +69,8 @@ if(isset($error_msg) && !empty($error_msg)) {
   </form>
 <br>
 </div> <!-- /container -->
- 
 
-<?php 
-include("templates/footer.inc.php")
+
+<?php
+include("../templates/footer.inc.php")
 ?>

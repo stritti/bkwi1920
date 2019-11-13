@@ -1,0 +1,9 @@
+{
+    "name": "bkwi1920/desert-horn",
+    "type": "project",
+    "require": {
+        "catfan/medoo": "^1.7"
+    },
+    "license": "MIT",
+    "minimum-stability": "alpha"
+}

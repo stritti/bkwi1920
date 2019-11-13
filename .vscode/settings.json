@@ -1,4 +1,3 @@
 {
-    "deepscan.enable": true,
-"php.executablePath": "C:\\xampp\\php\\php.exe"
+    "deepscan.enable": true
 }
