@@ -1,9 +1,9 @@
-<?php 
+<?php
 
-require_once("inc/config.inc.php");
-require_once("inc/functions.inc.php");
+require_once($root_url."/inc/config.inc.php");
+require_once($root_url."/inc/functions.inc.php");
 
-include("templates/header.inc.php")
+include($root_url."/templates/header.inc.php")
 ?>
 
       <div class="row">
@@ -38,11 +38,11 @@ include("templates/header.inc.php")
                     </div>
                   </div>
 
-              
- 
 
 
-              
+
+
+
               <div class="col-md-6 mb-3">
                 <label for="lastName">Beschreibung</label>
                 <textarea class="form-control" aria-label="With textarea"></textarea>
@@ -54,13 +54,13 @@ include("templates/header.inc.php")
 
             <button type="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
 
-           
+
     </div>
 
 
 
-<?php 
-include("templates/footer.inc.php")
+<?php
+include($root_url."/templates/footer.inc.php")
 ?>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

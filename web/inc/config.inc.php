@@ -10,7 +10,4 @@ $db_name = 'bkwi1920';
 $db_user = 'root';
 $db_password = '';
 
-//Basis-URL auf dem Webserver
-$root_url = '/bkwi';
-
 $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);

@@ -1,9 +1,10 @@
 <?php
 session_start();
-require_once("../inc/config.inc.php");
-require_once("../inc/functions.inc.php");
 
-include("../templates/header.inc.php")
+require_once __DIR__ . '/../init.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+
+include __DIR__ . "/../templates/header.inc.php"
 ?>
 <div class="container main-container registration-form">
 <br>
@@ -105,5 +106,5 @@ if($showFormular) {
 ?>
 </div>
 <?php
-include("../templates/footer.inc.php")
+include __DIR__ ."/../templates/footer.inc.php";
 ?>

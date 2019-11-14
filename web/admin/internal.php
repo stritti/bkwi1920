@@ -2,16 +2,15 @@
 session_start();
 
 // If you installed via composer, just use this code to require autoloader on the top of your projects.
-require_once '../vendor/autoload.php';
 
-require_once("../inc/config.inc.php");
-require_once("../inc/functions.inc.php");
+require_once __DIR__ . '/../init.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 //Überprüfe, dass der User eingeloggt ist
 //Der Aufruf von check_user() muss in alle internen Seiten eingebaut sein
 $user = check_user();
 
-include("../templates/header.inc.php");
+include __DIR__ . "/../templates/header.inc.php";
 ?>
 
 <div class="container main-container">
@@ -49,5 +48,5 @@ while($row = $statement->fetch()) {
 
 </div>
 <?php
-include("../templates/footer.inc.php")
+include __DIR__ . "/../templates/footer.inc.php";
 ?>

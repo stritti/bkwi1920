@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once("../inc/config.inc.php");
-require_once("../inc/functions.inc.php");
+require_once __DIR__ . '/../init.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $error_msg = "";
 if(isset($_POST['email']) && isset($_POST['passwort'])) {
@@ -27,7 +27,7 @@ if(isset($_POST['email']) && isset($_POST['passwort'])) {
 			setcookie("securitytoken",$securitytoken,time()+(3600*24*365)); //Valid for 1 year
 		}
 
-		header("location: /");
+		header("location: ".$root_url);
 		exit;
 	} else {
 		$error_msg =  "E-Mail oder Passwort war ungültig<br><br>";
@@ -39,7 +39,7 @@ $email_value = "";
 if(isset($_POST['email']))
 	$email_value = htmlentities($_POST['email']);
 
-include("../templates/header.inc.php");
+include "../templates/header.inc.php";
 ?>
  <div class="container small-container-330 form-signin">
   <form action="login.php" method="post">
@@ -72,5 +72,5 @@ if(isset($error_msg) && !empty($error_msg)) {
 
 
 <?php
-include("../templates/footer.inc.php")
+include __DIR__."/../templates/footer.inc.php";
 ?>
