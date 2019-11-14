@@ -1,9 +1,16 @@
 {
-    "name": "bkwi1920/desert-horn",
-    "type": "project",
-    "require": {
-        "catfan/medoo": "^1.7"
+	"name": "bsz-radolfzell/desert-horn",
+	"description": "Web Project",
+	"keywords": ["bkwi"],
+	"type": "project",
+	"license": ["MIT"],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
     },
-    "license": "MIT",
-    "minimum-stability": "alpha"
+	"require": {
+        "catfan/medoo": "^1.7",
+		"pecee/simple-router": "4.2.0.6",
+		"ocramius/proxy-manager": "^2.2",
+		"doctrine/annotations": "^1.8"
+	}
 }
