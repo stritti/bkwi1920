@@ -13,13 +13,12 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Web
-      run: cd ./web
-
     - name: Validate composer.json and composer.lock
+      run: cd ./web
       run: composer validate
 
     - name: Install dependencies
+      run: cd ./web
       run: composer install --prefer-dist --no-progress --no-suggest
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
