@@ -15,13 +15,11 @@ jobs:
 
     - name: Validate composer.json and composer.lock
       run:
-        cd ./web
-        composer validate
+        cd ./web && composer validate
 
     - name: Install dependencies
       run:
-        cd ./web
-        composer install --prefer-dist --no-progress --no-suggest
+        cd ./web && composer install --prefer-dist --no-progress --no-suggest
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
