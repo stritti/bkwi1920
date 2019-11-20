@@ -2,7 +2,8 @@
 session_start();
 require_once("inc/config.inc.php");
 require_once("inc/functions.inc.php");
-include("templates/header.inc.php")
+require_once("inc/index.inc.php");
+include("templates/header.inc.php");
 ?>
    <!-- Header -->
    <header class="bg-primary py-5 mb-5">
@@ -33,7 +34,7 @@ include("templates/header.inc.php")
 
     <div class="row">
 <?php
-    
+echo "" . getIndexList();
 global $anzeigeNr;
 for($anzeigeNr=0; $anzeigeNr < 10; $anzeigeNr++) {
    //echo "$i, ";
