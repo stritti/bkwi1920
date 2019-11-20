@@ -9,7 +9,7 @@
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Pricing example · Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/pricing/">
+    
 
     <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
