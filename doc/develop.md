@@ -3,5 +3,11 @@
 TODO
 
 * Verwendete Frameworks
-* Projekt lokal installieren
+* Projekt lokal einrichten & installieren
 * wichtige Kommandos
+
+
+## Composer
+
+A Dependency Manager for PHP: [https://getcomposer.org/]
+
