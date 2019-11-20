@@ -1,30 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.6.6deb5
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Erstellungszeit: 20. Nov 2019 um 10:12
--- Server-Version: 10.0.28-MariaDB-2+b1
--- PHP-Version: 7.3.11-1+0~20191026.48+debian10~1.gbpf71ca0
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Datenbank: `bkwi1920`
---
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `offer`
---
 
 CREATE TABLE `offer` (
   `id` int(11) NOT NULL,
@@ -33,34 +6,32 @@ CREATE TABLE `offer` (
   `createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `description` longtext NOT NULL,
   `price` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+);
 
---
--- Daten für Tabelle `offer`
---
+
 
 INSERT INTO `offer` (`id`, `creatorid`, `title`, `createdate`, `description`, `price`) VALUES
-(1, 0, 'Test-Verkauf', '2019-11-20 10:01:01', 'Dies ist ein Test-Verkauf', 0);
+(1, 1, 'Powerbank', '2019-11-20 10:01:01', 'War 2 Jahre in Gebrauch, funktioniert noch einwandfrei. Leichte Gebrauchsspuren', 4,99);
 
---
--- Indizes der exportierten Tabellen
---
+INSERT INTO `offer` (`id`, `creatorid`, `title`, `createdate`, `description`, `price`) VALUES
+(2, 1, 'HP Laptop', '2019-11-20 10:01:01', 'Verkaufen unseren Laptop von Medion.
+Er hat 18 Zoll und 500 GB Festplatte und 4 GB RAM.
 
---
--- Indizes für die Tabelle `offer`
---
+Er hat lediglich rechts unten eine kleine Macke, aber läuft sehr gut.
+
+Er hat leicht Gebrauchtspuren aber ist in einen guten Zustand.
+Das Display ist heile.', 295);
+
+INSERT INTO `offer` (`id`, `creatorid`, `title`, `createdate`, `description`, `price`) VALUES
+(3, 1, 'Der Familienfluch', '2019-11-20 10:01:01', 'Wie neu, keine Gebrauchspuren', 2,99);
+
+INSERT INTO `offer` (`id`, `creatorid`, `title`, `createdate`, `description`, `price`) VALUES
+(4, 1, 'YEEZY Boost 350 V2', '2019-11-20 10:01:01', 'Ich verkaufe schwerenherzens meine originalen Yeezys - Größe 45 - Zustand: leichte Gebrauchspuren', 350);
+
+
 ALTER TABLE `offer`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT für exportierte Tabellen
---
-
---
--- AUTO_INCREMENT für Tabelle `offer`
---
 ALTER TABLE `offer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2; 
+
