@@ -1,14 +1,19 @@
+<?php
+$statement = $pdo->prepare("SELECT * FROM offer ORDER BY createdate ASC");
+?>
+
 <div class="col-md-4 mb-5">
     <div class="card h-100">
       <img class="card-img-top" src="http://placehold.it/300x200" alt="">
       <div class="card-body">
-        <?php
-          $statement = $pdo->prepare("SELECT * FROM offer ORDER BY createdate ASC");
-          while($row = $statement->fetch()){
-          echo "<h4 class='card-title'>".$row['title']." </h4>";
-          
-          }
-          ?>
+          anzeigeNr = <?php echo $anzeigeNr; ?>
+        
+          <?php while($row = $statement->fetch()){ ?>
+            <h4 class='card-title'><?php echo $row['title']; ?> </h4>";
+                <div class="card-text col">
+                Preis
+          <?php } ?>
+
           <div class="row">
             <div class="card-text col">
             Preis
