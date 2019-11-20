@@ -12,6 +12,4 @@ include_once __DIR__ . '/inc/password.inc.php';
 define('APP_DIR', __DIR__ . '/../');
 
 // Basis-URL auf dem Webserver
-$root_url = '/bkwi';
-
-
+$root_url = '';
