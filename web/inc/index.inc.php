@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/inc/config.inc.php';
+require_once __DIR__ . '/config.inc.php';
 class offerobj{
     $sql = "select * from offer order by id asc limit 10";
     $Ergebnis = $pdo->query($sql);
