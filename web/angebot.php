@@ -46,6 +46,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<p class="text-xl-center">Price</p>
+
 <div class="container">
 <div class="row justify-content-center">
     <div class="col-sm-4">
@@ -56,17 +59,20 @@
     </div>
   </div>
     </div>
-      <p class="text-xl-center">Price</p>
+
+    
+
     <div class="row justify-content-center">
     <div class="col-sm-4">
 <button type="button" class="btn btn-secondary">
-Beobachter  <span class="badge badge-warning">9</span>
+Beobachten  <span class="badge badge-warning">9</span>
 </button>
     </div>
         <div class="col-sm-">
 <input class="btn btn-secondary" type="submit" value="Interesse">
       </div>
       </div>
+
       <p class="text-center">Beschreibung</p>
       
       

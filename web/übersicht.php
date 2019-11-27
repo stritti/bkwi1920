@@ -11,31 +11,27 @@ include __DIR__ . '/templates/header.inc.php'
 
 <table class="table">
   <tbody>
+
     <tr>
-      <td>Bild</td>
+      <td>Titelbild</td>
       <td>Titel</td>
       <td>Preis</td>
       <td>Gemerkt/Angesehen</td>
       <td>Erstelldatum(createdate)</td>
     </tr>
-
     <button type="button" class="btn btn-primary">Bearbeiten</button>
     <button type="button" class="btn btn-primary">Löschen</button>
 
-
-
-
-
     <tr>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Titelbild</td>
+      <td>Titel</td>
+      <td>Preis</td>
+      <td>Gemerkt/Angesehen</td>
+      <td>Erstelldatum(createdate)</td>
     </tr>
-    <tr>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <button type="button" class="btn btn-primary">Bearbeiten</button>
+    <button type="button" class="btn btn-primary">Löschen</button>
+ 
   </tbody>
 </table>
 
