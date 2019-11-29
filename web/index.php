@@ -2,7 +2,6 @@
 session_start();
 require_once __DIR__ . '/inc/config.inc.php';
 require_once __DIR__ . '/inc/functions.inc.php';
-require_once __DIR__ . '/inc/index.inc.php';
 include __DIR__ . '/templates/header.inc.php';
 ?>
    <!-- Header -->
