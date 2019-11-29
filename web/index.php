@@ -47,7 +47,7 @@ while($row = $statement->fetch()) {
                 </div>
                 <div class="card-footer">
                     <a href="angebot.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Beobachtung</a>
-                    <div style="text-align: rightPreparation for Christmas">
+                    <div style="text-align: right">
                         <span class="badge"><?php echo $row['createdate'];?></span>
                     </div>
                 </div>
