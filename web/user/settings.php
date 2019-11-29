@@ -8,7 +8,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 //Der Aufruf von check_user() muss in alle internen Seiten eingebaut sein
 $user = check_user();
 
-include __DIR__ ."/../templates/header.inc.php";
+include __DIR__ . '/../templates/header_user.inc.php';
 
 if(isset($_GET['save'])) {
 	$save = $_GET['save'];

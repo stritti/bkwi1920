@@ -39,11 +39,9 @@ $email_value = "";
 if(isset($_POST['email']))
 	$email_value = htmlentities($_POST['email']);
 
-include __DIR__ . '/../templates/header.inc.php';
+include __DIR__ . '/../templates/header_user.inc.php';
 ?>
-<link href="<?php echo dirname($_SERVER['PHP_SELF']) . '/../vendor/bootstrap/css/bootstrap.min.css';?>" rel="stylesheet">
-<!-- Custom styles for this template -->
-<link href="<?php echo dirname($_SERVER['PHP_SELF']) . '/../css/styles.css';?>" rel="stylesheet">
+
  <div class="container small-container-330 form-signin">
   <form action="login.php" method="post">
 	  <br>

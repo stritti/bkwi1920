@@ -54,7 +54,7 @@ if(isset($_GET['send'])) {
 	}
 }
 
-include __DIR__ . '/../templates/header.inc.php';
+include __DIR__ . '/../templates/header_user.inc.php';
 ?>
 
  <div class="container small-container-500">

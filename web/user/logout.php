@@ -11,7 +11,7 @@ setcookie("identifier","",time()-(3600*24*365));
 setcookie("securitytoken","",time()-(3600*24*365));
 
 
-include __DIR__ . "/../templates/header.inc.php";
+include __DIR__ . '/../templates/header_user.inc.php';
 ?>
 
 <div class="container main-container">
