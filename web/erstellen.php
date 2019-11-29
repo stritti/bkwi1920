@@ -28,31 +28,32 @@ if (isset($_POST['button'])) {
                 </div>
             </div>
 
-          <form class="needs-validation" action="#" novalidate>
+          <form class="needs-validation" action="erstellen.php" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Titel</label>
-                <input type="text" class="form-control" id="form_title" placeholder="" value="" required>
+                <input type="text" class="form-control" name="form_title" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                     <label for="firstName">Preis</label>
-                    <input type="text" class="form-control" id="form_price" placeholder="" value="" required>
+                    <input type="text" class="form-control" name="form_price" placeholder="" value="" required>
                     <div class="invalid-feedback">
                       Valid first name is required.
                     </div>
                   </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Beschreibung</label>
-                <textarea class="form-control" aria-label="With textarea" id="form_description"></textarea>
+                <textarea class="form-control" aria-label="With textarea" name="form_description"></textarea>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
               </div>
             </div>
-            <button type="button" id="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
+            <button type="button" name="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
+            </form>
         </div>
     </div>
 
