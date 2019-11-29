@@ -28,7 +28,7 @@ if (isset($_POST['button'])) {
                 </div>
             </div>
 
-          <form class="needs-validation" action="erstellen.php" method="post" novalidate>
+          <form method="post" action="erstellen.php">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Titel</label>
