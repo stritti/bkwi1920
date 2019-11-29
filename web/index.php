@@ -17,7 +17,6 @@ include __DIR__ . '/templates/header.inc.php';
   </header>
   <!-- Page Content -->
   <div class="container">
-
     <div class="row">
       <div class="col-md-8 mb-5">
         <h2>Die Angebote</h2>
@@ -26,7 +25,6 @@ include __DIR__ . '/templates/header.inc.php';
         <a class="btn btn-primary btn-lg" href="#">Kategorie &raquo;</a>
       </div>
       <div class="col-md-4 mb-5">
-
       </div>
     </div>
     <!-- /.row -->
@@ -38,5 +36,5 @@ include __DIR__ . '/templates/header.inc.php';
   </div>
   <!-- /.container -->
 <?php
-include("templates/footer.inc.php")
+include __DIR__ . '/templates/footer.inc.php';
 ?>

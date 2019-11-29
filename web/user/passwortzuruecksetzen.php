@@ -54,7 +54,7 @@ if(isset($_GET['send'])) {
 	}
 }
 
-include($root_url."/templates/header.inc.php");
+include __DIR__ . '/../templates/header.inc.php';
 ?>
 
  <div class="container small-container-500">
@@ -85,5 +85,5 @@ endif;
 
 
 <?php
-include($root_url."/templates/footer.inc.php")
+include __DIR__ . '/../templates/footer.inc.php';
 ?>

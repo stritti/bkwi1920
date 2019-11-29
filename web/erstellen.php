@@ -37,12 +37,6 @@ include __DIR__ . '/templates/header.inc.php'
                       Valid first name is required.
                     </div>
                   </div>
-
-
-
-
-
-
               <div class="col-md-6 mb-3">
                 <label for="lastName">Beschreibung</label>
                 <textarea class="form-control" aria-label="With textarea"></textarea>
@@ -53,8 +47,6 @@ include __DIR__ . '/templates/header.inc.php'
             </div>
 
             <button type="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
-
-
     </div>
 
 

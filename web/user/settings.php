@@ -202,11 +202,8 @@ endif;
     	</form>
     </div>
   </div>
-
 </div>
-
-
 </div>
 <?php
-include __DIR__ ."/../templates/footer.inc.php";
+include __DIR__ . "/../templates/footer.inc.php";
 ?>

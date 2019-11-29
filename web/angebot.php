@@ -1,25 +1,10 @@
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Pricing example · Bootstrap</title>
-
-    
-
-    <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/business-frontpage.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-  </head>
-  <body>
-
-      <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+<?php
+session_start();
+require_once __DIR__ . '/inc/config.inc.php';
+require_once __DIR__ . '/inc/functions.inc.php';
+include __DIR__ . '/templates/header.inc.php';
+?>
+<h1>Example heading <span class="badge badge-secondary">New</span></h1>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -60,7 +45,7 @@
   </div>
     </div>
 
-    
+
 
     <div class="row justify-content-center">
     <div class="col-sm-4">
@@ -74,28 +59,6 @@ Beobachten  <span class="badge badge-warning">9</span>
       </div>
 
       <p class="text-center">Beschreibung</p>
-      
-      
-      
-
-    
-
-      
-      
-  
-      
-      <!--fooooooooter-->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-      
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+<?php
+include __DIR__ . '/templates/footer.inc.php';
+?>

@@ -13,7 +13,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="<?php echo __DIR__ . '/../vendor/jquery/jquery.min.js';?>"></script>
-  <script src="<?php echo __DIR__ . '/../vendor/bootstrap/js/bootstrap.bundle.min.js';?>"></script>
+  <script src="<?php echo dirname($_SERVER['PHP_SELF']) . '/vendor/jquery/jquery.min.js';?>"></script>
+  <script src="<?php echo dirname($_SERVER['PHP_SELF']) . '/vendor/bootstrap/js/bootstrap.bundle.min.js';?>"></script>
 </body>
 </html>

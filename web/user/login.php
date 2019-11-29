@@ -39,7 +39,7 @@ $email_value = "";
 if(isset($_POST['email']))
 	$email_value = htmlentities($_POST['email']);
 
-include "../templates/header.inc.php";
+include __DIR__ . '/templates/header.inc.php';
 ?>
  <div class="container small-container-330 form-signin">
   <form action="login.php" method="post">
