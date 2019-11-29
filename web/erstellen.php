@@ -44,8 +44,8 @@ include __DIR__ . '/templates/header.inc.php'
                   Valid last name is required.
                 </div>
               </div>
+              <button type="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
             </div>
-            <button type="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
         </div>
     </div>
 
