@@ -3,7 +3,14 @@ require_once __DIR__ . '/init.php';
 require_once __DIR__ . '/inc/config.inc.php';
 require_once __DIR__ . '/inc/functions.inc.php';
 
-include __DIR__ . '/templates/header.inc.php'
+include __DIR__ . '/templates/header.inc.php';
+
+
+if (isset($_POST['button'])) {
+    global $pdo;
+    $statement = $pdo->prepare("INSERT INTO users (title, description, price) VALUES (:title, :description, :price)");
+    $statement->execute(array('title' => form_title, 'description' => form_description, 'price' => form_price));
+}
 ?>
 
       <div class="row">
@@ -21,31 +28,31 @@ include __DIR__ . '/templates/header.inc.php'
                 </div>
             </div>
 
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation" action="#" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Titel</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <input type="text" class="form-control" id="form_title" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                     <label for="firstName">Preis</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <input type="text" class="form-control" id="form_price" placeholder="" value="" required>
                     <div class="invalid-feedback">
                       Valid first name is required.
                     </div>
                   </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Beschreibung</label>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
+                <textarea class="form-control" aria-label="With textarea" id="form_description"></textarea>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
               </div>
-              <button type="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
             </div>
+            <button type="button" id="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
         </div>
     </div>
 
