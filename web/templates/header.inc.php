@@ -27,6 +27,9 @@
           <li class="nav-item">
           <a class="nav-link" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/user/register.php';?>">Register</a>
           </li>
+          <li class="nav-item">
+          <a class="nav-link" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/erstellen.php';?>">Neuen Eintrag erstellen</a>
+          </li>
         </ul>
       </div>
         <?php else: ?>
