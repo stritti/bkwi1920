@@ -1,9 +1,9 @@
-<?php 
+<?php
 session_start();
-require_once("inc/config.inc.php");
-require_once("inc/functions.inc.php");
-require_once("inc/index.inc.php");
-include("templates/header.inc.php");
+require_once __DIR__ . 'inc/config.inc.php';
+require_once __DIR__ . 'inc/functions.inc.php';
+require_once __DIR__ . 'inc/index.inc.php';
+include __DIR__ . 'templates/header.inc.php';
 ?>
    <!-- Header -->
    <header class="bg-primary py-5 mb-5">
@@ -27,7 +27,7 @@ include("templates/header.inc.php");
         <a class="btn btn-primary btn-lg" href="#">Kategorie &raquo;</a>
       </div>
       <div class="col-md-4 mb-5">
-        
+
       </div>
     </div>
     <!-- /.row -->
@@ -39,15 +39,15 @@ global $anzeigeNr;
 for($anzeigeNr=0; $anzeigeNr < 10; $anzeigeNr++) {
    //echo "$i, ";
    include("anzeige/kachel.php");
-    
+
 }
-      
+
   ?>
     </div>
     <!-- /.row -->
 
   </div>
   <!-- /.container -->
-<?php 
+<?php
 include("templates/footer.inc.php")
 ?>
