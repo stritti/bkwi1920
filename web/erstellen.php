@@ -28,7 +28,7 @@ if (isset($_POST['button'])) {
                 </div>
             </div>
 
-          <form method="post" action="erstellen.php">
+          <form method="post" action="">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">Titel</label>
@@ -52,7 +52,7 @@ if (isset($_POST['button'])) {
                 </div>
               </div>
             </div>
-            <button type="button" name="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
+            <button type="submit" name="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
             </form>
         </div>
     </div>
