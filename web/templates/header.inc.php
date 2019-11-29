@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Loginscript</title>
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo __DIR__ . '/../../vendor/bootstrap/css/bootstrap.min.css';?>" rel="stylesheet">
+    <link href="<?php echo dirname($_SERVER['PHP_SELF']) . '/../../vendor/bootstrap/css/bootstrap.min.css';?>" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="<?php echo __DIR__ . '/../../css/styles.css';?>" rel="stylesheet">
+    <link href="<?php echo dirname($_SERVER['PHP_SELF']) . '/../../css/styles.css';?>" rel="stylesheet">
   </head>
   <body>
 <!-- Navigation -->
