@@ -39,7 +39,7 @@ while($row = $statement->fetch()) {
   </a>
 </div>
 
-<p class="text-xl-center"><?php echo $row['price'];?></p>
+<p class="text-xl-center"><?php echo $row['price'];?> €</p>
 
 <div class="container">
 <div class="row justify-content-center">
@@ -54,7 +54,7 @@ while($row = $statement->fetch()) {
     <div class="row justify-content-center">
     <div class="col-sm-4">
 <button type="button" class="btn btn-secondary">
-Beobachten  <span class="badge badge-warning">9</span>
+Beobachten  <span class="badge badge-warning">0</span>
 </button>
     </div>
         <div class="col-sm-">
