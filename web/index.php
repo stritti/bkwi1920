@@ -40,7 +40,7 @@ while($row = $statement->fetch()) {
             <div class="card h-100">
             <img class="card-img-top" src="http://placehold.it/300x200" alt="">
                 <div class="card-body">
-                        <h4 class='card-title'><?php echo $row['title'];?></h4>";
+                        <h4 class='card-title'><?php echo $row['title'];?></h4>
                     <div class="row">
                         <div class="card-text col"><?php echo $row['price'];?></div>
                         <div class="card-text col"><?php echo $row['createdate'];?></div>
@@ -54,8 +54,6 @@ while($row = $statement->fetch()) {
 <?php
 }
 ?>
-
-
     </div>
     <!-- /.row -->
   </div>
