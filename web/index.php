@@ -32,16 +32,6 @@ include __DIR__ . '/templates/header.inc.php';
     <!-- /.row -->
 
     <div class="row">
-<?php
-echo "" . getIndexList();
-global $anzeigeNr;
-for($anzeigeNr=0; $anzeigeNr < 10; $anzeigeNr++) {
-   //echo "$i, ";
-   include("anzeige/kachel.php");
-
-}
-
-  ?>
     </div>
     <!-- /.row -->
 
