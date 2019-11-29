@@ -41,13 +41,13 @@ while($row = $statement->fetch()) {
             <img class="card-img-top" src="http://placehold.it/300x200" alt="">
                 <div class="card-body">
                         <h4 class='card-title'><?php echo $row['title'];?></h4>
-                    <div class="row">
-                        <div class="card-text col"><?php echo $row['price'];?> €</div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a href="angebot.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Beobachtung</a>
                     <div style="text-align: right">
+                        <div class="row">
+                            <div class="card-text col"><?php echo $row['price'];?> €</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="angebot.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Beobachtung</a>
                         <span class="badge"><?php echo $row['createdate'];?></span>
                     </div>
                 </div>
