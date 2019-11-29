@@ -10,7 +10,7 @@ include __DIR__ . '/templates/header.inc.php'
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Anzeige erstellen</h4>
 
-          <div class="d-block my-3">
+            <div class="d-block my-3">
                 <div class="custom-control custom-radio">
                   <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
                   <label class="custom-control-label" for="credit">Ich biete...</label>
@@ -19,7 +19,7 @@ include __DIR__ . '/templates/header.inc.php'
                   <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
                   <label class="custom-control-label" for="debit">Ich suche...</label>
                 </div>
-              </div>
+            </div>
 
           <form class="needs-validation" novalidate>
             <div class="row">
@@ -45,8 +45,8 @@ include __DIR__ . '/templates/header.inc.php'
                 </div>
               </div>
             </div>
-
             <button type="button" class="btn btn-primary btn-lg">Anzeige erstellen</button>
+        </div>
     </div>
 
 
