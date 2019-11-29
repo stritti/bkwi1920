@@ -2,6 +2,8 @@
 session_start();
 require_once __DIR__ . '/../init.php';
 require_once __DIR__ . '/../vendor/autoload.php';
+include __DIR__ . '/../templates/header.inc.php';
+
 
 $error_msg = "";
 if(isset($_POST['email']) && isset($_POST['passwort'])) {
