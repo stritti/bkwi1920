@@ -4,7 +4,14 @@ require_once __DIR__ . '/inc/config.inc.php';
 require_once __DIR__ . '/inc/functions.inc.php';
 include __DIR__ . '/templates/header.inc.php';
 ?>
-<h1>Example heading <span class="badge badge-secondary">New</span></h1>
+<?php
+global $pdo;
+$statement = $pdo->prepare("SELECT * FROM offer WHERE id = :id");
+$statement->execute(array(':id' => $_GET['id']));
+while($row = $statement->fetch()) {
+?>
+
+<h1><?php echo $row['title'];?> <span class="badge badge-secondary">New</span></h1>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -32,7 +39,7 @@ include __DIR__ . '/templates/header.inc.php';
   </a>
 </div>
 
-<p class="text-xl-center">Price</p>
+<p class="text-xl-center"><?php echo $row['price'];?></p>
 
 <div class="container">
 <div class="row justify-content-center">
@@ -44,9 +51,6 @@ include __DIR__ . '/templates/header.inc.php';
     </div>
   </div>
     </div>
-
-
-
     <div class="row justify-content-center">
     <div class="col-sm-4">
 <button type="button" class="btn btn-secondary">
@@ -58,7 +62,11 @@ Beobachten  <span class="badge badge-warning">9</span>
       </div>
       </div>
 
-      <p class="text-center">Beschreibung</p>
+      <p class="text-center"><?php echo $row['description'];?></p>
+
+<?php
+}
+?>
 <?php
 include __DIR__ . '/templates/footer.inc.php';
 ?>
