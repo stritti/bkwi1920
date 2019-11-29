@@ -8,7 +8,7 @@ include __DIR__ . '/templates/header.inc.php';
 
 if (isset($_POST['button'])) {
     global $pdo;
-    $statement = $pdo->prepare("INSERT INTO users (title, description, price) VALUES (:title, :description, :price)");
+    $statement = $pdo->prepare("INSERT INTO offer (title, description, price) VALUES (:title, :description, :price)");
     $statement->execute(array('title' => $_POST['form_title'], 'description' => $_POST['form_description'], 'price' => $_POST['form_price']));
 }
 ?>
