@@ -47,7 +47,7 @@ while($row = $statement->fetch()) {
       <?php echo $row['name'];?>
     </div>
     <div class="col-sm-">
-     <?php echo $row['class']?>
+     <?php echo $row['class'];?>
     </div>
   </div>
     </div>
