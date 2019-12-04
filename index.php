@@ -11,7 +11,7 @@ include __DIR__ . '/templates/header.inc.php';
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">Radolfzell School Sale</h1>
+          <h1 class="display-4 text-white mt-5 mb-2">Radolfzell School Sale2</h1>
           <p class="lead mb-5 text-white-50">Seite zum Gegenstände verkaufen am Bodensee BSZ Radolfzell</p>
         </div>
       </div>
