@@ -6,7 +6,7 @@ include __DIR__ . '/templates/header.inc.php';
 ?>
 <?php
 global $pdo;
-$statement = $pdo->prepare("SELECT * FROM offer,users WHERE id = :id");
+$statement = $pdo->prepare("SELECT * FROM offer, users WHERE offer.creatorid = users.id AND offer.id = :id");
 $statement->execute(array(':id' => $_GET['id']));
 while($row = $statement->fetch()) {
 ?>
@@ -39,14 +39,14 @@ while($row = $statement->fetch()) {
   </a>
 </div>
 
-<p class="text-xl-center"><?php echo $row['price'];?> €</p>
+<p class="font-weight-bolder-center"><?php echo $row['price'];?> €</p>
 
 <div class="container">
 <div class="row justify-content-center">
     <div class="col-sm-4">
-      <?php echo $row['name'];?>
+      <?php echo $row['nachname'] . ", " . $row['vorname'];?>
     </div>
-    <div class="col-sm-">
+    <div class="col-sm-4">
      <?php echo $row['class'];?>
     </div>
   </div>
