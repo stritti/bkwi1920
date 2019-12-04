@@ -41,7 +41,7 @@ function check_user() {
 	
 	
 	if(!isset($_SESSION['userid'])) {
-		die('Bitte zuerst <a href="login.php">einloggen</a>');
+		return false;
 	}
 	
 

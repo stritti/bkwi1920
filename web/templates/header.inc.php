@@ -27,18 +27,14 @@
           <li class="nav-item">
           <a class="nav-link" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/user/register.php';?>">Register</a>
           </li>
-          <li class="nav-item">
-          <a class="nav-link" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/erstellen.php';?>">Neuen Eintrag erstellen</a>
-          </li>
         </ul>
       </div>
         <?php else: ?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/admin/internal.php';?>">Datenbank
-            </a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/erstellen.php';?>">Neuen Eintrag erstellen</a>
+        </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/user/settings.php';?>">Einstellungen</a>
           </li>
