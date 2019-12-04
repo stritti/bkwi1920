@@ -39,7 +39,7 @@ while($row = $statement->fetch()) {
   </a>
 </div>
 
-<p class="text-xl-center"><?php echo $row['price'];?> €</p>
+<p class="font-weight-bold-text-align-center"><?php echo $row['price'];?> €</p>
 
 <div class="container">
 <div class="row justify-content-center">
