@@ -12,12 +12,8 @@ setcookie("securitytoken","",time()-(3600*24*365));
 
 
 include __DIR__ . '/../templates/header_user.inc.php';
-?>
+header('Location: /bkwi1920/web/');
 
-<div class="container main-container">
-Der Logout war erfolgreich. <a href="login.php">Zurück zum Login</a>.
-</div>
 
-<?php
-include __DIR__ . "/../templates/footer.inc.php"
+include __DIR__ . "/../templates/footer.inc.php";
 ?>
