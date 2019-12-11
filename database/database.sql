@@ -26,5 +26,5 @@ CREATE TABLE `securitytokens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-INSERT INTO `users` (`id`, `email`, `passwort`, `vorname`, `nachname`, `created_at`, `updated_at`, `passwortcode`, `passwortcode_time`) VALUES
-(1, 'Max.Mustermann@web.de', '$2y$10$4vNiWskcBoWmX28ehfHH5utYJJGidFEtB1WeJTe/XVkzLnudUJAqK', 'Max', 'Mustermann', '2019-11-20 13:47:01', '2019-11-20 13:47:01', NULL, NULL);
+INSERT INTO `users` (`id`, `email`, `passwort`, `vorname`, `nachname`, `class`, `created_at`, `updated_at`, `passwortcode`, `passwortcode_time`) VALUES
+(1, 'Max.Mustermann@web.de', '$2y$10$4vNiWskcBoWmX28ehfHH5utYJJGidFEtB1WeJTe/XVkzLnudUJAqK', 'Max', 'Mustermann', '2BKWI2', '2019-11-20 13:47:01', '2019-11-20 13:47:01', NULL, NULL);
