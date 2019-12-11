@@ -14,7 +14,7 @@ if (isset($_POST['submit_button'])) {
     header("location: " . dirname($_SERVER['PHP_SELF']) . '/');
 }
 ?>
-  <body class="bg-light" style="padding-top: 90px; padding-bottom: 90px;">
+  <body class="bg-light" style="padding-top: 90px;">
     <div class="container">
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Angebot erstellen</h4>
@@ -82,7 +82,6 @@ if (isset($_POST['submit_button'])) {
       </form>
     </div>
     </div>
-  </body>
 <?php
 include __DIR__ . '/templates/footer.inc.php';
 }else{
