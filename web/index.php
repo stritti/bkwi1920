@@ -21,10 +21,10 @@ include __DIR__ . '/templates/header.inc.php';
       <div class="col-md-8 mb-5">
         <h2>Die Angebote</h2>
         <hr>
-        <p></p>
-        <a class="btn btn-primary btn-lg" href="#">Kategorie &raquo;</a>
+
       </div>
       <div class="col-md-4 mb-5">
+      <a class="btn btn-primary btn-lg" href="#">Kategorie &raquo;</a>
       </div>
     </div>
     <!-- /.row -->
@@ -40,19 +40,22 @@ while($row = $statement->fetch()) {
         <div class="col-md-4 mb-5">
             <div class="card h-100">
                 <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
-                    <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+                    <img class="card-img-top" src="http://placehold.it/300x200" alt="<?php echo $row['title'];?>">
                 </a>
                 <div class="card-body">
-                    <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
-                        <h4 class='card-title'><?php echo $row['title'];?></h4>
-                    </a>
-                    <div style="text-align: right">
-                        <div class="row">
-                            <div class="card-text col"><?php echo $row['price'];?> €</div>
+                    <div class="row">
+                        <div class="col">
+                        <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
+                            <h4 class='card-title'><?php echo $row['title'];?></h4>
+                        </a>
+                        </div>
+                        <div class="col">
+
+                            <h4 class="card-text text-right"><?php echo $row['price'];?> €</h4>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Beobachtung</a>
+                        <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">mehr &raquo;</a>
                         <span class="badge"><?php echo $row['createdate'];?></span>
                     </div>
                 </div>
