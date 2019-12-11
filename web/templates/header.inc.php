@@ -1,3 +1,8 @@
+<?php
+@session_start();
+require_once __DIR__ . '/../inc/config.inc.php';
+require_once __DIR__ . '/../inc/functions.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -18,7 +23,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-        <?php if(!is_checked_in()) : ?>
+        <?php if(!(is_checked_in())) { ?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -29,7 +34,7 @@
           </li>
         </ul>
       </div>
-        <?php else: ?>
+        <?php } else {?>
         <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -43,6 +48,6 @@
           </li>
         </ul>
       </div>
-        <?php endif; ?>
+        <?php } ?>
       </div>
     </nav>
