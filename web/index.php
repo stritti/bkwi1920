@@ -36,11 +36,16 @@ $statement = $pdo->prepare("SELECT * FROM offer ORDER BY createdate DESC LIMIT 1
 $statement->execute(array());
 while($row = $statement->fetch()) {
 ?>
+
         <div class="col-md-4 mb-5">
             <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+                <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
+                    <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+                </a>
                 <div class="card-body">
+                    <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
                         <h4 class='card-title'><?php echo $row['title'];?></h4>
+                    </a>
                     <div style="text-align: right">
                         <div class="row">
                             <div class="card-text col"><?php echo $row['price'];?> €</div>
