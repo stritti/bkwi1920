@@ -40,33 +40,39 @@ while($row = $statement->fetch()) {
     </a>
     </div>
 
+    <div class="row justify-content-center">
+        <h1><?php echo $row['title'];?> <span class="badge badge-secondary">New</span></h1>
+    </div>
 
-    <h1><?php echo $row['title'];?> <span class="badge badge-secondary">New</span></h1>
 
-
-    <p class="text-center" style="font-size: 50pt;"><?php echo $row['price'];?> €</p>
+    <p class="text-center" style="font-size: 32pt;"><?php echo $row['price'];?> €</p>
 
     <div class="row justify-content-center">
-
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><?php echo $row['nachname'] . ", " . $row['vorname'];?></li>
-            <li class="list-group-item"><?php echo $row['class'];?></li>
-        </ul>
-
-        <div class="row justify-content-center">
-            <div class="col-sm-4">
-                <button type="button" class="btn btn-secondary">
-                    Beobachten  <span class="badge badge-warning">0</span>
-                </button>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                 <button type="button" class="btn btn-secondary">Boebachtung <span class="badge badge-warning">0</span></button>
             </div>
-            <div class="">
-                <input class="btn btn-secondary" type="submit" value="Interesse" />
+            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-secondary">Interesse</button>
             </div>
+
         </div>
-
-        <p class="text-center"><?php echo $row['description'];?></p>
-
     </div>
+
+    <div class="row justify-content-center">
+        <br>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><?php echo $row['nachname'] . ", " . $row['vorname'];?></li>
+                <li class="list-group-item"><?php echo $row['class'];?></li>
+             </ul>
+        </br>
+    </div>
+
+
+        <br>
+            <p class="text-center"><?php echo $row['description'];?></p>
+        </br>
+
 
 </div>
 <?php
