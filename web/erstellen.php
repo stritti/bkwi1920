@@ -4,7 +4,7 @@ require_once __DIR__ . '/inc/config.inc.php';
 require_once __DIR__ . '/inc/functions.inc.php';
 
 include __DIR__ . '/templates/header.inc.php';
-
+if (is_checked_in()) {
 
 if (isset($_POST['button'])) {
     session_start();
@@ -65,4 +65,7 @@ if (isset($_POST['button'])) {
 
 <?php
 include __DIR__ . '/templates/footer.inc.php';
+}else{
+  header("Location: /bkwi1920/web/");
+}
 ?>
