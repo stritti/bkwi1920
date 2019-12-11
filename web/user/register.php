@@ -4,7 +4,7 @@ session_start();
 require_once __DIR__ . '/../init.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
-include __DIR__ . "/../templates/header.inc.php"
+include __DIR__ . '/../templates/header_user.inc.php';
 ?>
 <div class="container main-container registration-form">
 <br>
@@ -20,6 +20,7 @@ if(isset($_GET['register'])) {
 	$email = trim($_POST['email']);
 	$passwort = $_POST['passwort'];
 	$passwort2 = $_POST['passwort2'];
+	$class = $_POST['class'];
 
 	if(empty($vorname) || empty($nachname) || empty($email)) {
 		echo 'Bitte alle Felder ausfüllen<br>';
@@ -55,8 +56,8 @@ if(isset($_GET['register'])) {
 	if(!$error) {
 		$passwort_hash = password_hash($passwort, PASSWORD_DEFAULT);
 
-		$statement = $pdo->prepare("INSERT INTO users (email, passwort, vorname, nachname) VALUES (:email, :passwort, :vorname, :nachname)");
-		$result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash, 'vorname' => $vorname, 'nachname' => $nachname));
+		$statement = $pdo->prepare("INSERT INTO users (email, passwort, vorname, nachname, class) VALUES (:email, :passwort, :vorname, :nachname, :class)");
+		$result = $statement->execute(array('email' => $email, 'passwort' => $passwort_hash, 'vorname' => $vorname, 'nachname' => $nachname, 'class' => $class));
 
 		if($result) {
 			echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
@@ -80,6 +81,11 @@ if($showFormular) {
 <div class="form-group">
 <label for="inputNachname">Nachname:</label>
 <input type="text" id="inputNachname" size="40" maxlength="250" name="nachname" class="form-control" required>
+</div>
+
+<div class="form-group">
+<label for="inputclass">Klasse:</label>
+<input type="text" id="inputclass" size="40" maxlength="250" name="class" class="form-control" required>
 </div>
 
 <div class="form-group">

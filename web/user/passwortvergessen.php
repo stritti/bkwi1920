@@ -3,7 +3,7 @@ session_start();
 require_once __DIR__ . '/../init.php';
 require_once __DIR__ . '/../vendor/autoload.php';
 
-include __DIR__ . "/../templates/header.inc.php";
+include __DIR__ . '/../templates/header_user.inc.php';
 ?>
  <div class="container small-container-330">
 	<h2 >Passwort vergessen</h2>

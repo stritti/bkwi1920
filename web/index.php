@@ -1,9 +1,8 @@
-<?php 
+<?php
 session_start();
-require_once("inc/config.inc.php");
-require_once("inc/functions.inc.php");
-require_once("inc/index.inc.php");
-include("templates/header.inc.php");
+require_once __DIR__ . '/inc/config.inc.php';
+require_once __DIR__ . '/inc/functions.inc.php';
+include __DIR__ . '/templates/header.inc.php';
 ?>
    <!-- Header -->
    <header class="bg-primary py-5 mb-5">
@@ -18,7 +17,6 @@ include("templates/header.inc.php");
   </header>
   <!-- Page Content -->
   <div class="container">
-
     <div class="row">
       <div class="col-md-8 mb-5">
         <h2>Die Angebote</h2>
@@ -27,27 +25,41 @@ include("templates/header.inc.php");
         <a class="btn btn-primary btn-lg" href="#">Kategorie &raquo;</a>
       </div>
       <div class="col-md-4 mb-5">
-        
       </div>
     </div>
     <!-- /.row -->
 
     <div class="row">
 <?php
-echo "" . getIndexList();
-global $anzeigeNr;
-for($anzeigeNr=0; $anzeigeNr < 10; $anzeigeNr++) {
-   //echo "$i, ";
-   include("anzeige/kachel.php");
-    
+global $pdo;
+$statement = $pdo->prepare("SELECT * FROM offer ORDER BY createdate DESC LIMIT 10;");
+$statement->execute(array());
+while($row = $statement->fetch()) {
+?>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+                <div class="card-body">
+                        <h4 class='card-title'><?php echo $row['title'];?></h4>
+                    <div style="text-align: right">
+                        <div class="row">
+                            <div class="card-text col"><?php echo $row['price'];?> €</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Beobachtung</a>
+                        <span class="badge"><?php echo $row['createdate'];?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+<?php
 }
-      
-  ?>
+?>
     </div>
     <!-- /.row -->
-
   </div>
   <!-- /.container -->
-<?php 
-include("templates/footer.inc.php")
+<?php
+include __DIR__ . '/templates/footer.inc.php';
 ?>
