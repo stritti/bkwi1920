@@ -60,17 +60,19 @@ while($row = $statement->fetch()) {
     </div>
 
     <div class="row justify-content-center">
-
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"><?php echo $row['nachname'] . ", " . $row['vorname'];?></li>
-            <li class="list-group-item"><?php echo $row['class'];?></li>
-        </ul>
-
-
-
-        <p class="text-center"><?php echo $row['description'];?></p>
-
+        <br>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><?php echo $row['nachname'] . ", " . $row['vorname'];?></li>
+                <li class="list-group-item"><?php echo $row['class'];?></li>
+             </ul>
+        </br>
     </div>
+
+
+        <br>
+            <p class="text-center"><?php echo $row['description'];?></p>
+        </br>
+
 
 </div>
 <?php
