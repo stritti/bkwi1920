@@ -5,7 +5,8 @@ CREATE TABLE `offer` (
   `title` varchar(255) NOT NULL,
   `createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `description` longtext NOT NULL,
-  `price` int(255) NOT NULL
+  `price` int(255) NOT NULL,
+  `price_method` varchar(255) NOT NULL
 );
 
 
