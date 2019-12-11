@@ -11,58 +11,68 @@ $statement->execute(array(':id' => $_GET['id']));
 while($row = $statement->fetch()) {
 ?>
 
-<h1><?php echo $row['title'];?> <span class="badge badge-secondary">New</span></h1>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://via.placeholder.com/350x128" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://via.placeholder.com/350x128" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://via.placeholder.com/350x128" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<p class="text-center" style="font-size: 70pt;"><?php echo $row['price'];?> €</p>
-
 <div class="container">
-<div class="row justify-content-center">
-    <div class="col-sm-4">
-      <?php echo $row['nachname'] . ", " . $row['vorname'];?>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://via.placeholder.com/350x128" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="https://via.placeholder.com/350x128" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="https://via.placeholder.com/350x128" class="d-block w-100" alt="...">
+        </div>
     </div>
-    <div class="col-sm-4">
-     <?php echo $row['class'];?>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
     </div>
-  </div>
-    </div>
+
     <div class="row justify-content-center">
-    <div class="col-sm-4">
-<button type="button" class="btn btn-secondary">
-Beobachten  <span class="badge badge-warning">0</span>
-</button>
+        <h1><?php echo $row['title'];?> <span class="badge badge-secondary">New</span></h1>
     </div>
-        <div class="col-sm-">
-<input class="btn btn-secondary" type="submit" value="Interesse">
-      </div>
-      </div>
 
-      <p class="text-center"><?php echo $row['description'];?></p>
 
+    <p class="text-center" style="font-size: 32pt;"><?php echo $row['price'];?> €</p>
+
+    <div class="row justify-content-center">
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                 <button type="button" class="btn btn-secondary">Boebachtung <span class="badge badge-warning">0</span></button>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="Second group">
+                <button type="button" class="btn btn-secondary">Interesse</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><?php echo $row['nachname'] . ", " . $row['vorname'];?></li>
+            <li class="list-group-item"><?php echo $row['class'];?></li>
+        </ul>
+
+
+
+        <p class="text-center"><?php echo $row['description'];?></p>
+
+    </div>
+
+</div>
 <?php
 }
 ?>
