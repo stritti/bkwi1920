@@ -70,7 +70,7 @@ while($row = $statement->fetch()) {
 
 
         <br>
-            <p class="text-center"><?php echo $row['description'];?></p>
+            <p class="text-left"><?php echo $row['description'];?></p>
         </br>
 
 
