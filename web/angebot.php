@@ -48,15 +48,17 @@ while($row = $statement->fetch()) {
     <p class="text-center" style="font-size: 32pt;"><?php echo $row['price'];?> €</p>
 
     <div class="row justify-content-center">
-        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" aria-label="First group">
-                 <button type="button" class="btn btn-secondary">Boebachtung <span class="badge badge-warning">0</span></button>
-            </div>
-            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                <button type="button" class="btn btn-secondary">Interesse</button>
-            </div>
+        <br>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-secondary">Boebachtung <span class="badge badge-warning">0</span></button>
+                </div>
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-secondary">Interesse</button>
+                </div>
 
-        </div>
+            </div>
+        </br>
     </div>
 
     <div class="row justify-content-center">
