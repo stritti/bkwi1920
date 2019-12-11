@@ -38,7 +38,7 @@ while($row = $statement->fetch()) {
     <span class="sr-only">Next</span>
   </a>
 </div>
-<p class="text-center"><p class="font-weight-bold"><?php echo $row['price'];?> €</p></p>
+<p class="text-center" style="font-size: 70pt;"><?php echo $row['price'];?> €</p>
 
 <div class="container">
 <div class="row justify-content-center">
