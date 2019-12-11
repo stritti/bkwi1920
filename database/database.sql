@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `passwort` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `vorname` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' ,
   `nachname` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' ,
+  `class` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' ,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
   `passwortcode` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
