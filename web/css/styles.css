@@ -4,3 +4,36 @@
 body {
   padding-top: 56px;
 }
+
+
+.pricetag{
+    white-space:nowrap;
+    position:relative;
+    margin:0 5px 0 10px;
+    display:inline-block;
+    height:50px;
+    border-radius: 0 5px 5px 0;
+    padding: 0 25px 0 15px;
+    background:#E8EDF0;
+    border: 0 solid #C7D2D4;
+    border-top-width:1px;
+    border-bottom-width:1px;
+    color:#999;
+    line-height:32px;
+}
+
+.pricetag:before{
+    position:absolute;
+    content:"\25CF";
+    color:white;
+    text-shadow: 0 0 1px #333;
+    font-size:11px;
+    line-height:0px;
+    text-indent:12px;
+    left:-15px;
+    width: 1px;
+    height:0px;
+    border-right:14px solid #E8EDF0;
+    border-top:  25px solid transparent;
+    border-bottom:  25px solid transparent;
+}

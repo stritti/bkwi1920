@@ -2,10 +2,10 @@
 session_start();
 require_once __DIR__ . '/inc/config.inc.php';
 require_once __DIR__ . '/inc/functions.inc.php';
-include __DIR__ . '/templates/header.inc.php';
+require_once __DIR__ . '/templates/header.inc.php';
 ?>
    <!-- Header -->
-   <header class="bg-primary py-5 mb-5">
+   <header class="bg-primary py-3 mb-3">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
@@ -18,10 +18,9 @@ include __DIR__ . '/templates/header.inc.php';
   <!-- Page Content -->
   <div class="container">
     <div class="row">
-      <div class="col-md-8 mb-5">
+      <div class="col-md-8 mb-2">
         <h2>Die Angebote</h2>
         <hr>
-
       </div>
       <div class="col-md-4 mb-5">
       <a class="btn btn-primary btn-lg" href="#">Kategorie &raquo;</a>
@@ -34,7 +33,7 @@ include __DIR__ . '/templates/header.inc.php';
 global $pdo;
 $statement = $pdo->prepare("SELECT * FROM offer ORDER BY createdate DESC LIMIT 10;");
 $statement->execute(array());
-while($row = $statement->fetch()) {
+while ($row = $statement->fetch()) {
 ?>
 
         <div class="col-md-4 mb-5">
@@ -44,20 +43,23 @@ while($row = $statement->fetch()) {
                 </a>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-8">
                         <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
                             <h4 class='card-title'><?php echo $row['title'];?></h4>
                         </a>
                         </div>
-                        <div class="col">
+                        <div class="col-4">
 
-                            <h4 class="card-text text-right"><?php echo $row['price'];?> €</h4>
+                            <h4 class="card-text text-right">
+                                <span class="pricetag"><?php echo $row['price'];?> €</span>
+                            </h4>
                         </div>
                     </div>
-                    <div class="card-footer">
-                        <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">mehr &raquo;</a>
-                        <span class="badge"><?php echo $row['createdate'];?></span>
-                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary text-left" href="angebot.php?id=<?php echo $row['id']; ?>" >mehr &raquo;</a>
+                    <span class="badge text-right"><?php echo $row['createdate'];?></span>
                 </div>
             </div>
         </div>

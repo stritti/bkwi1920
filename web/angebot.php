@@ -2,13 +2,13 @@
 session_start();
 require_once __DIR__ . '/inc/config.inc.php';
 require_once __DIR__ . '/inc/functions.inc.php';
-include __DIR__ . '/templates/header.inc.php';
+require_once __DIR__ . '/templates/header.inc.php';
 ?>
 <?php
 global $pdo;
 $statement = $pdo->prepare("SELECT * FROM offer, users WHERE offer.creatorid = users.id AND offer.id = :id");
 $statement->execute(array(':id' => $_GET['id']));
-while($row = $statement->fetch()) {
+while ($row = $statement->fetch()) {
 ?>
 
 <div class="container">
@@ -40,41 +40,39 @@ while($row = $statement->fetch()) {
     </a>
     </div>
 
-    <div class="row justify-content-center">
-        <h1><?php echo $row['title'];?> <span class="badge badge-secondary">New</span></h1>
+    <div class="row">
+        <h1 class="col-10"><?php echo $row['title'];?></h1>
+        <h2 class="col-2">
+            <span class="pricetag"><?php echo $row['price'];?> €</span>
+        </h2>
+    </div>
+
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary">
+                Boebachtung <span class="badge badge-warning">0</span>
+            </button>
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+            <button type="button" class="btn btn-secondary">Interesse</button>
+        </div>
     </div>
 
 
-    <p class="text-center" style="font-size: 32pt;"><?php echo $row['price'];?> €</p>
-
-    <div class="row justify-content-center">
-        <br>
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-secondary">Boebachtung <span class="badge badge-warning">0</span></button>
-                </div>
-                <div class="btn-group mr-2" role="group" aria-label="Second group">
-                    <button type="button" class="btn btn-secondary">Interesse</button>
-                </div>
-
-            </div>
-        </br>
+    <div class="row">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <?php echo $row['nachname'] . ", " . $row['vorname'];?>
+            </li>
+            <li class="list-group-item">
+                <?php echo $row['class'];?>
+            </li>
+        </ul>
     </div>
 
-    <div class="row justify-content-center">
-        <br>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><?php echo $row['nachname'] . ", " . $row['vorname'];?></li>
-                <li class="list-group-item"><?php echo $row['class'];?></li>
-             </ul>
-        </br>
+    <div class="row">
+        <p class="col text-left"><?php echo $row['description'];?></p>
     </div>
-
-
-        <br>
-            <p class="text-left"><?php echo $row['description'];?></p>
-        </br>
-
 
 </div>
 <?php
