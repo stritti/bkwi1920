@@ -31,7 +31,7 @@ require_once __DIR__ . '/templates/header.inc.php';
     <div class="row">
 <?php
 global $pdo;
-$statement = $pdo->prepare("SELECT * FROM offer ORDER BY createdate DESC LIMIT 10;");
+$statement = $pdo->prepare("SELECT offer.id, offer.title, offer.price, offer.createdate, offer.price_method, category.value FROM offer, category where offer.category = category.id ORDER BY createdate DESC LIMIT 10;");
 $statement->execute(array());
 while ($row = $statement->fetch()) {
 ?>
@@ -43,15 +43,22 @@ while ($row = $statement->fetch()) {
                 </a>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-8">
-                        <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
-                            <h4 class='card-title'><?php echo $row['title'];?></h4>
-                        </a>
+                        <div class="col-7">
+                          <a style="text-align: left" href="angebot.php?id=<?php echo $row['id']; ?>">
+                              <h4 class='card-title'><?php echo $row['title'];?></h4>
+                          </a>
+                          <span class="badge badge-primary"><?php echo $row['value'];?></span>
                         </div>
                         <div class="col-4">
-
                             <h4 class="card-text text-right">
-                                <span class="pricetag"><?php echo $row['price'];?> €</span>
+                            <?php
+                            if ($row['price_method'] == "vb_price") {
+                              $price_method = "VB";
+                            }else{
+                              $price_method = "";
+                            }
+                            ?>
+                                <span class="pricetag"><?php echo $row['price'];?> € <?php echo $price_method;?></span>
                             </h4>
                         </div>
                     </div>
