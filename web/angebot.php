@@ -6,6 +6,11 @@ require_once __DIR__ . '/templates/header.inc.php';
 ?>
 <?php
 global $pdo;
+if (isset($_POST['button'])) {
+    $statement = $pdo->prepare("Insert into notice (offer, user) values (:offerid, :userid)");
+    $statement->execute(array('userid' => $_SESSION['userid'], 'offerid' => $_GET['id']));
+    header("location: " . dirname($_SERVER['PHP_SELF']) . '/');
+}
 $statement = $pdo->prepare("SELECT * FROM offer, users WHERE offer.creatorid = users.id AND offer.id = :id");
 $statement->execute(array(':id' => $_GET['id']));
 while ($row = $statement->fetch()) {
@@ -49,9 +54,20 @@ while ($row = $statement->fetch()) {
 
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="button" class="btn btn-secondary">
-                Boebachtung <span class="badge badge-warning">0</span>
+        <?php
+            global $pdo;
+            $statement = $pdo->prepare("SELECT count(id) as count FROM notice where offer = :offerid;");
+            $statement->execute(array('offerid' => $_GET['id']));
+            while ($row = $statement->fetch()) {
+            ?>
+            <form action="" method="post">
+            <button type="submit" class="btn btn-secondary" name="button" href="/">
+            Beobachten <span class="badge badge-warning"><?php echo $row['count']; ?></span>
             </button>
+            </form>
+            <?php
+            }
+            ?>
         </div>
         <div class="btn-group mr-2" role="group" aria-label="Second group">
             <button type="button" class="btn btn-secondary">Interesse</button>
